@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "donuts",
+  "info": {
+    "name": "Donut",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "text"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "ingredients": {
+      "via": "donuts",
+      "collection": "ingredient"
+    }
+  }
+}

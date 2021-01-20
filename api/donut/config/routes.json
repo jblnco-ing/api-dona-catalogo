@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/donuts",
+      "handler": "donut.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/donuts/count",
+      "handler": "donut.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/donuts/:id",
+      "handler": "donut.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/donuts",
+      "handler": "donut.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/donuts/:id",
+      "handler": "donut.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/donuts/:id",
+      "handler": "donut.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

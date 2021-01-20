@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ingredients",
+  "info": {
+    "name": "Ingredient",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "text"
+    },
+    "donuts": {
+      "collection": "donut",
+      "via": "ingredients",
+      "dominant": true
+    }
+  }
+}
